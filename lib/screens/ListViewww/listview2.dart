@@ -9,7 +9,8 @@ class ListView_separated extends StatelessWidget {
 
   var datas = [
     Data(name: "orange",doubledata: 80,image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEAv6Eio5S08EuB3FlBDY5ujy4K5dS5NfZyb2zbuhNARjvsZbJyYkMyHCVSXj2FR0gi8&usqp=CAU"),
-    Data(name: "Pineapple",doubledata: 60,image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzRDlpg1FNdyGLPUbBwx4-C8XVe6PI2OWP6P-HjfevHLt6-2WkF-QToj91SboSAlul03RQGw")
+    Data(name: "Pineapple",doubledata: 60,image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzRDlpg1FNdyGLPUbBwx4-C8XVe6PI2OWP6P-HjfevHLt6-2WkF-QToj91SboSAlul03RQGw"),
+    Data(name: "Pizza",doubledata: 110,image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShqNOrnCWng5zaBj2reNeU2QHAMaeyj1EJJhqbunN9kg&s" )
   ];
   @override
   Widget build(BuildContext context) {
@@ -38,9 +39,10 @@ class ListView_separated extends StatelessWidget {
         child: Container(
           height: 200,
           decoration: BoxDecoration(
-            //image: Image.network("https://images.unsplash.com/photo-1704975986930-0c09f513c985?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
-            color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-            //  image: DecorationImage(image: "https://images.unsplash.com/photo-1704975986930-0c09f513c985?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+            //color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+              image: const DecorationImage(
+                  fit: BoxFit.cover,
+                  image:NetworkImage("https://images.unsplash.com/photo-1704975986930-0c09f513c985?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")),
               borderRadius: BorderRadius.circular(60)
 
           ),
