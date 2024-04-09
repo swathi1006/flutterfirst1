@@ -10,7 +10,11 @@ class ListView_separated extends StatelessWidget {
   var datas = [
     Data(name: "orange",doubledata: 80,image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEAv6Eio5S08EuB3FlBDY5ujy4K5dS5NfZyb2zbuhNARjvsZbJyYkMyHCVSXj2FR0gi8&usqp=CAU"),
     Data(name: "Pineapple",doubledata: 60,image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzRDlpg1FNdyGLPUbBwx4-C8XVe6PI2OWP6P-HjfevHLt6-2WkF-QToj91SboSAlul03RQGw"),
-    Data(name: "Pizza",doubledata: 110,image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShqNOrnCWng5zaBj2reNeU2QHAMaeyj1EJJhqbunN9kg&s" )
+    Data(name: "Pizza",doubledata: 110,image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShqNOrnCWng5zaBj2reNeU2QHAMaeyj1EJJhqbunN9kg&s" ),
+    Data(
+        name: "Salad",
+        doubledata: 180,
+        image: "https://veggiefunkitchen.com/wp-content/uploads/2023/06/rainbow-salad-4-scaled.jpg"),
   ];
   @override
   Widget build(BuildContext context) {
