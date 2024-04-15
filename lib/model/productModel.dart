@@ -5,7 +5,10 @@ class Data {
   double? doubledata;
   double? time;
   String? date;
+  String? offer;
+  String? name2;
+  int? mrp;
 
 
-  Data({this.name, this.numdata, this.image, this.doubledata,this.date,this.time});
+  Data({this.name, this.numdata, this.image, this.doubledata,this.date,this.time,this.name2,this.mrp,this.offer});
 }
