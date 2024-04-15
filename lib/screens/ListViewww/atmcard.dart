@@ -90,7 +90,7 @@ class ATMCard extends StatelessWidget {
                 left: 300,
                 child: Transform.rotate(
               angle: math.pi / 2,
-              child: Icon(
+              child: const Icon(
                 Icons.wifi,
                 size: 30,
                 color: Colors.grey,
