@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutterfirst/screens/Gridviewww/product_widget.dart';
 import 'package:flutterfirst/widget/widget1.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class XYZReader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
+        title:  Center(
           child: Text(
             "xyzreader",
-            style: TextStyle(
-                fontSize: 40,
+              style:  GoogleFonts.quicksand(
+                fontSize:40,
                 color: Colors.white,
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.bold,
+              )
           ),
         ),
         backgroundColor: Colors.teal.shade500,
