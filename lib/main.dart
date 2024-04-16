@@ -5,6 +5,9 @@ import 'package:flutterfirst/screens/Gridviewww/gridview2.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview3.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview4.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview5.dart';
+import 'package:flutterfirst/screens/Gridviewww/stagGrid2.dart';
+import 'package:flutterfirst/screens/Gridviewww/stagGrid3.dart';
+import 'package:flutterfirst/screens/Gridviewww/staggered_gridview.dart';
 import 'package:flutterfirst/screens/ListViewww/atmcard.dart';
 import 'package:flutterfirst/screens/ListViewww/listview4.dart';
 import 'package:flutterfirst/screens/ListViewww/stackEx.dart';
@@ -36,7 +39,10 @@ class MyApp extends StatelessWidget {
     // home: GridView3(),
       //home: GridView4(),
       //home: GridView5(),
-      home: Countries(),
+      //home: Countries(),
+      //home: Stag_Grid_View(),
+      //home: OilProduct(),
+      home: XYZReader(),
     );
   }
 }
