@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/ShoeApp/screens/views/shoeHome.dart';
+import 'package:flutterfirst/ShoeApp/screens/views/shoeshop.dart';
 import 'package:flutterfirst/screens/Gridviewww/countries.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview1.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview2.dart';
@@ -11,10 +13,14 @@ import 'package:flutterfirst/screens/Gridviewww/staggered_gridview.dart';
 import 'package:flutterfirst/screens/ListViewww/atmcard.dart';
 import 'package:flutterfirst/screens/ListViewww/listview4.dart';
 import 'package:flutterfirst/screens/ListViewww/stackEx.dart';
+import 'package:flutterfirst/screens/MusifyApp/home1.dart';
+import 'package:flutterfirst/screens/bottomNavBar.dart';
+import 'package:flutterfirst/screens/cslider.dart';
 import 'package:flutterfirst/screens/home1.dart';
 import 'package:flutterfirst/screens/slivers.dart';
 import 'package:flutterfirst/screens/splashPage.dart';
 import 'package:flutterfirst/screens/splash_page_with_background.dart';
+import 'package:flutterfirst/screens/tabEx.dart';
 
 
 void main() {
@@ -42,7 +48,23 @@ class MyApp extends StatelessWidget {
       //home: Countries(),
       //home: Stag_Grid_View(),
       //home: OilProduct(),
-      home: XYZReader(),
+      //home: XYZReader(),
+      //home: CSlider(),
+      //home: BottomNavBar(),
+
+     /*
+      darkTheme: ThemeData(
+          primaryColor: Colors.black54,
+          brightness: Brightness.dark,
+          // primarySwatch: Colors.black
+         // useMaterial3: true
+      ),
+
+      */
+      //home: HomeM(),
+      //home: TabEx(),
+      //home: ShoeHome(),
+      home: ShoeShop(),
     );
   }
 }

@@ -10,5 +10,13 @@ class Data {
   int? mrp;
 
 
-  Data({this.name, this.numdata, this.image, this.doubledata,this.date,this.time,this.name2,this.mrp,this.offer});
+  Data({this.name,
+    this.numdata,
+    this.image,
+    this.doubledata,
+    this.date,
+    this.time,
+    this.name2,
+    this.mrp,
+    this.offer});
 }

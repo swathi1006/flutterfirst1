@@ -29,6 +29,7 @@ class Countries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
        appBar: AppBar(
          leading: const Icon(Icons.keyboard_backspace,
          color: Colors.white,),
@@ -51,13 +52,13 @@ class Countries extends StatelessWidget {
                            fit: BoxFit.cover),
                        borderRadius: BorderRadius.circular(10)
                      ),
+                       alignment: Alignment.bottomLeft,
+                     padding: EdgeInsets.only(left: 10),
 
                      child: Text("${places[index].name}",
 
-                     style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,
+                     style: const TextStyle(fontSize: 30,fontWeight: FontWeight.bold,
                      color: Colors.white),),
-                       alignment: Alignment.bottomLeft,
-                     padding: EdgeInsets.only(left: 10),
                    ),
                  ))
       ),
