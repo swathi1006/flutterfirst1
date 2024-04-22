@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirst/ShoeApp/screens/views/shoeHome.dart';
 import 'package:flutterfirst/ShoeApp/screens/views/shoeshop.dart';
+import 'package:flutterfirst/drawer2.dart';
+import 'package:flutterfirst/drawerr.dart';
 import 'package:flutterfirst/screens/Gridviewww/countries.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview1.dart';
 import 'package:flutterfirst/screens/Gridviewww/gridview2.dart';
@@ -15,6 +17,7 @@ import 'package:flutterfirst/screens/ListViewww/listview4.dart';
 import 'package:flutterfirst/screens/ListViewww/stackEx.dart';
 import 'package:flutterfirst/screens/MusifyApp/home1.dart';
 import 'package:flutterfirst/screens/bottomNavBar.dart';
+import 'package:flutterfirst/screens/bottomsheet.dart';
 import 'package:flutterfirst/screens/cslider.dart';
 import 'package:flutterfirst/screens/home1.dart';
 import 'package:flutterfirst/screens/slivers.dart';
@@ -64,7 +67,10 @@ class MyApp extends StatelessWidget {
       //home: HomeM(),
       //home: TabEx(),
       //home: ShoeHome(),
-      home: ShoeShop(),
+      //home: ShoeShop(),
+      //home: DrawerEx(),
+      //home: BottomSheett(),
+      home: Drawer2(),
     );
   }
 }
