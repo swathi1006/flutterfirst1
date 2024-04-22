@@ -18,6 +18,7 @@ import 'package:flutterfirst/screens/ListViewww/stackEx.dart';
 import 'package:flutterfirst/screens/MusifyApp/home1.dart';
 import 'package:flutterfirst/screens/bottomNavBar.dart';
 import 'package:flutterfirst/screens/bottomsheet.dart';
+import 'package:flutterfirst/screens/bottomsheet2.dart';
 import 'package:flutterfirst/screens/cslider.dart';
 import 'package:flutterfirst/screens/home1.dart';
 import 'package:flutterfirst/screens/slivers.dart';
@@ -70,7 +71,9 @@ class MyApp extends StatelessWidget {
       //home: ShoeShop(),
       //home: DrawerEx(),
       //home: BottomSheett(),
-      home: Drawer2(),
+      //home: Drawer2(),
+      home: BottomSheet2(),
+
     );
   }
 }

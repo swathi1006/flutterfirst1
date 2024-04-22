@@ -21,7 +21,8 @@ class Drawer2 extends StatelessWidget {
               decoration: BoxDecoration(
                 //color: Colors.black.withOpacity(0.6)
               ),
-                accountName: Text("Bongani Nkosi"),
+                accountName: Text("Bongani Nkosi",
+                ),
                 accountEmail: Text("nkosilebongang95@gmail.com"),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage("assets/images/b1.png"),
