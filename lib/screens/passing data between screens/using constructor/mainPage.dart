@@ -15,7 +15,7 @@ class MainPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
           onPressed: (){
                 Navigator.push(context,
                 MaterialPageRoute(
@@ -24,6 +24,7 @@ class MainPage extends StatelessWidget {
               child: const Text("To stateless Screen")),
              const SizedBox(height: 20,),
           ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
               onPressed: (){
                 Navigator.push(context,
                     MaterialPageRoute(
