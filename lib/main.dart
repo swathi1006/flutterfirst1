@@ -21,6 +21,9 @@ import 'package:flutterfirst/screens/bottomsheet.dart';
 import 'package:flutterfirst/screens/bottomsheet2.dart';
 import 'package:flutterfirst/screens/cslider.dart';
 import 'package:flutterfirst/screens/home1.dart';
+import 'package:flutterfirst/screens/passing%20data%20between%20screens/using%20constructor/mainPage.dart';
+import 'package:flutterfirst/screens/shoeHome.dart';
+import 'package:flutterfirst/screens/shoedetails.dart';
 import 'package:flutterfirst/screens/slivers.dart';
 import 'package:flutterfirst/screens/splashPage.dart';
 import 'package:flutterfirst/screens/splash_page_with_background.dart';
@@ -65,14 +68,19 @@ class MyApp extends StatelessWidget {
       ),
 
       */
-      //home: HomeM(),
+      home: HomeM(),
       //home: TabEx(),
       //home: ShoeHome(),
       //home: ShoeShop(),
       //home: DrawerEx(),
       //home: BottomSheett(),
       //home: Drawer2(),
-      home: BottomSheet2(),
+      //home: BottomSheet2(),
+      //home: MainPage(),
+      //home: ShoeHome1(),
+      routes: {
+        'shoeDetails':(context) => ShoeDetails(),
+      },
 
     );
   }

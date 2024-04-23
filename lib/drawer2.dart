@@ -17,18 +17,24 @@ class Drawer2 extends StatelessWidget {
         backgroundColor: Colors.black.withOpacity(0.8),
         child: ListView(
           children:  [
-              const UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-                //color: Colors.black.withOpacity(0.6)
-              ),
-                accountName: Text("Bongani Nkosi",
-                ),
-                accountEmail: Text("nkosilebongang95@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/b1.png"),
-              ),
+              const Column(
+               // crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  UserAccountsDrawerHeader(
+                  decoration: BoxDecoration(
+                    //color: Colors.black.withOpacity(0.6)
+                  ),
+                    accountName: Text("Bongani Nkosi",
+                    ),
+                    accountEmail: Text("nkosilebongang95@gmail.com"),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/b1.png"),
+                  ),
 
-                          ),
+                              ),
+                ],
+              ),
             Padding(
               padding: const EdgeInsets.only(left:15.0,right: 15.0),
               child: MaterialButton(onPressed: (){},
