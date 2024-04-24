@@ -18,7 +18,11 @@ class ShoeHome1 extends StatelessWidget {
         itemCount: home.length,
           itemBuilder: (context,index){
             return InkWell(
-              onTap: () => Navigator.pushNamed(context, 'shoeDetails'),
+              onTap: () => Navigator.pushNamed(
+                  context,
+                  'shoeDetails',
+                  arguments: index
+              ),
               child: ShoeView(
                 imagepath: home[index].image,
                 name: home[index].name,

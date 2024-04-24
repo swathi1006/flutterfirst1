@@ -17,6 +17,8 @@ import 'package:flutterfirst/screens/ListViewww/listview4.dart';
 import 'package:flutterfirst/screens/ListViewww/stackEx.dart';
 import 'package:flutterfirst/screens/MusifyApp/home1.dart';
 import 'package:flutterfirst/screens/MusifyApp/playlist.dart';
+import 'package:flutterfirst/screens/TourismApp/placedetails.dart';
+import 'package:flutterfirst/screens/TourismApp/popularpage.dart';
 import 'package:flutterfirst/screens/bottomNavBar.dart';
 import 'package:flutterfirst/screens/bottomsheet.dart';
 import 'package:flutterfirst/screens/bottomsheet2.dart';
@@ -79,9 +81,11 @@ class MyApp extends StatelessWidget {
       //home: BottomSheet2(),
       //home: MainPage(),
       //home: ShoeHome1(),
-      home: PlayList(),
+      //home: PlayList(),
+      home: PopularPage(),
       routes: {
         'shoeDetails':(context) => ShoeDetails(),
+        'placeDetails':(context) => PlaceDetails()
       },
 
     );
