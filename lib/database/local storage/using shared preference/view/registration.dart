@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirst/database/local%20storage/using%20shared%20preference/view/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignUpShared extends StatefulWidget {
   @override
@@ -7,53 +8,81 @@ class SignUpShared extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpShared> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final  emailContrl = TextEditingController();
+  final  passContrl = TextEditingController();
+
+  late SharedPreferences preferencess;
+  late bool registered;
+
+  @override
+  void initState() {
+   check_user_alredy_registered();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: const Text('Sign Up'),
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("SignUp",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-            SizedBox(height: 30,),
+            const Text("SignUp",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+            const SizedBox(height: 30,),
             TextField(
-              controller: _emailController,
-              decoration: InputDecoration(
+              controller: emailContrl,
+              decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
-              controller: _passwordController,
+              controller: passContrl,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             MaterialButton(
-              onPressed: (){},
+              onPressed: (){
+                storeDataandRegister(emailContrl.text,passContrl.text);
+              },
               color: Colors.blue,
               textColor: Colors.white,
-              child: Text('Sign Up'),
+              child: const Text('Sign Up'),
             ),
             TextButton(
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginShared()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginShared()));
                 },
-                child: Text("Already Registered? Login! "))
+                child: const Text("Already Registered? Login! "))
           ],
         ),
       ),
     );
+  }
+
+  Future<void> storeDataandRegister(String email, String password) async{
+    preferencess = await SharedPreferences.getInstance();
+    preferencess.setString('registereduname', email);
+    preferencess.setBool('egisteredUser', true);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginShared()));
+  }
+
+  void check_user_alredy_registered() async{
+    preferencess = await SharedPreferences.getInstance();
+    registered = preferencess.getBool('RegisteredUser') ?? false;
+
+    if(registered == true){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginShared()));
+    }
   }
 }

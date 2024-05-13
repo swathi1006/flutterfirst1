@@ -19,42 +19,55 @@ class _LoginSharedState extends State<LoginShared> {
   late bool loggedIn;
 
   @override
+  void initState() {
+    check_user_alredy_loggedin();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login Page"),
+        backgroundColor: Colors.green,
       ),
       body: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Login",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-            SizedBox(height: 30,),
-            const TextField(
-              decoration: InputDecoration(
+            const Text("Login",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+            const SizedBox(height: 30,),
+
+             TextField(
+              controller: emailController,
+              decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 20),
-            const TextField(
+
+            TextField(
+              controller: pwdController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 20),
             MaterialButton(
-              onPressed: (){},
-              child: Text("Login"),
+              onPressed: (){
+                storedDataandLogin(emailController.text, pwdController.text);
+              },
+              child: const Text("Login"),
               color: Colors.green,
             ),
             TextButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpShared()));
             },
-                child: Text("Not a user? Register here"))
+                child: const Text("Not a user? Register here"))
           ],
         ),
       ),
@@ -65,6 +78,8 @@ class _LoginSharedState extends State<LoginShared> {
     preferences = await SharedPreferences.getInstance();
     preferences.setString("username", email);
     preferences.setBool("userLoggedIn", true);
+
+
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => HomeShared())
     );
