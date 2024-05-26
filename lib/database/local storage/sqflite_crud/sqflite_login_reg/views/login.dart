@@ -13,6 +13,7 @@ class _LoginSQFLiteState extends State<LoginSQFLite> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 250,
         backgroundColor: Colors.black,
         title: const Center(

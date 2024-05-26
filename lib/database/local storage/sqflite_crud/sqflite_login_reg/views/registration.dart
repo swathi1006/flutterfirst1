@@ -8,6 +8,7 @@ class RegSQFLite extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 250,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         title: const Center(
           child: Column(
