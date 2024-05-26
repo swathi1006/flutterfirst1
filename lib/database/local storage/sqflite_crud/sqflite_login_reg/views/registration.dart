@@ -12,8 +12,6 @@ class RegSQFLite extends StatelessWidget {
         backgroundColor: Colors.black,
         title: const Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("PUNCH",style: TextStyle(fontSize: 55,fontWeight: FontWeight.bold,color: Colors.white),),
               Text("Punch . Earn . Repeat",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white))
@@ -27,6 +25,13 @@ class RegSQFLite extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Row(
+                children: [
+                  IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_new_outlined)),
+                  SizedBox(width: 90,),
+                  Text("Sign Up",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),)
+                ],),
+              const SizedBox(height: 40,),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(25.0),),
