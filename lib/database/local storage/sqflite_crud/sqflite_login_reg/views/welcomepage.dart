@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/database/local%20storage/sqflite_crud/sqflite_login_reg/views/login.dart';
 import 'package:flutterfirst/database/local%20storage/sqflite_crud/sqflite_login_reg/views/registration.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -46,7 +47,9 @@ class WelcomePage extends StatelessWidget {
                 minWidth: 300,
                 height: 50,
                 shape: const StadiumBorder(side: BorderSide(color: Colors.black,width: 1.0)),
-                onPressed: (){}),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginSQFLite()));
+                }),
           ],
         ),
       ),

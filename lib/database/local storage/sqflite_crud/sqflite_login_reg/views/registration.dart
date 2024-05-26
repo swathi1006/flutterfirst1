@@ -6,7 +6,6 @@ class RegSQFLite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         toolbarHeight: 250,
         backgroundColor: Colors.black,
