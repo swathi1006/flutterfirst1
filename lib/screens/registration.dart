@@ -13,6 +13,7 @@ class RegistrationPage extends StatefulWidget {
 /// mutable state of registrationpage   here we can create and rebuild widget tree using initState() and setState() function
 
 class _RegistrationPageState extends State<RegistrationPage> {
+
   TextEditingController passController = TextEditingController();
 
   var formkey = GlobalKey<FormState>();

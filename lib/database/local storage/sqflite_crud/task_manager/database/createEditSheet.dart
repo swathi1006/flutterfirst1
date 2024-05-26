@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/database/local%20storage/sqflite_crud/task_manager/database/db.dart';
+import 'package:flutterfirst/database/local%20storage/sqflite_crud/task_manager/utils/snackbar.dart';
+
+/// this file should be created in widget folder
+final titleController = TextEditingController();
+final contentController = TextEditingController();
 
 showSheet(int? id, BuildContext context) {
-  final titleController = TextEditingController();
-  final contentController = TextEditingController();
+
 
   showModalBottomSheet(
 
@@ -21,17 +26,10 @@ showSheet(int? id, BuildContext context) {
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Title", border: OutlineInputBorder()),
-                ),
-              ),
-              Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: titleController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Title",
                     border: OutlineInputBorder()
                   ),
@@ -42,13 +40,28 @@ showSheet(int? id, BuildContext context) {
                 child: TextField(
                   maxLines: 5,
                   controller: contentController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Content",
                     border: OutlineInputBorder()
                   ),
                 ),
               ),
-              ElevatedButton(onPressed: (){},
+              ElevatedButton(
+
+                  onPressed: (){
+                    if(id == null){
+                      createNote(context);
+                    }
+                   if(id != null){
+                     updateNote(id,titleController.text,contentController.text);
+                   }
+                    titleController.clear();
+                    contentController.clear();
+                    Navigator.pop(context);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.green), // Custom color
+                  ),
                   child: Text(
                     id == null ?
                         "Create Note" : "Update Note"
@@ -58,4 +71,22 @@ showSheet(int? id, BuildContext context) {
         );
       }
   );
+}
+
+Future<int> updateNote(int id, String utitle,String ucontent) async {
+await SQLHelper.openOrCreateDb();
+
+return id;
+}
+
+void createNote(context) async{
+  String title = titleController.text;
+  String content = contentController.text;
+  int id = await SQLHelper.createNote(title,content);
+  //readTask();
+  if(id != null){
+    showSuccessSnackBar(context);
+  }else{
+    showErrorSnackBar(context);
+  }
 }

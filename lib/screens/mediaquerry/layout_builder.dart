@@ -1,3 +1,5 @@
+/*
+
 import 'package:flutter/material.dart';
 
 class MyAPP extends StatelessWidget {
@@ -23,11 +25,13 @@ class ResponsiveLayouut extends StatelessWidget {
       if (constraints.maxWidth > 600){
         WideLayout();
       }else{
-        SmallLayout
+        SmallLayout();
       }
     });
   }
 }
+*/
+/*
 class SmallLayout extends StatelessWidget {
 
   @override
@@ -46,3 +50,4 @@ class SmallLayout extends StatelessWidget {
     );
   }
 }
+*/

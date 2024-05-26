@@ -15,6 +15,14 @@ class MyApp extends StatelessWidget {
   }
 }
 */
+/*
+class Location {
+  final String name;
+  final String label;
+  final LatLng coordinates;
+
+  Location({required this.name, required this.label, required this.coordinates});
+}
 
 class MapWithFABs extends StatefulWidget {
   @override
@@ -22,14 +30,17 @@ class MapWithFABs extends StatefulWidget {
 }
 
 class _MapWithFABsState extends State<MapWithFABs> {
-  late GoogleMapController _mapController;
+
+
+
+  late GoogleMapController = _mapController;
   Set<Marker> _markers = {};
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Map with FABs'),
+        title: const Text('Map with FABs'),
       ),
       body: Stack(
         children: [
@@ -37,7 +48,7 @@ class _MapWithFABsState extends State<MapWithFABs> {
             onMapCreated: (controller) {
               _mapController = controller;
             },
-            initialCameraPosition: CameraPosition(
+            initialCameraPosition: const CameraPosition(
               target: LatLng(37.7749, -122.4194), // San Francisco coordinates
               zoom: 12.0,
             ),
@@ -50,16 +61,16 @@ class _MapWithFABsState extends State<MapWithFABs> {
               onPressed: () {
                 // Add your action for the first FAB here
               },
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 16.0,
             right: 16.0,
             child: FloatingActionButton(
               onPressed: _goToTheLake,
-              label: const Text('To the lake!'),
-              icon: const Icon(Icons.directions_boat),
+              label: Text('To the lake!'),
+              icon: Icon(Icons.directions_boat),
               child: Icon(Icons.search),
             ),
           ),
@@ -69,33 +80,14 @@ class _MapWithFABsState extends State<MapWithFABs> {
     );
   }
 }
+
+ */
+/*
 Future<void> _goToTheLake() async {
   final GoogleMapController controller = await _controller.future;
   await controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
 }
 }
 
-
-class  extends StatelessWidget {
-  const ({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
-class  extends StatefulWidget {
-  const ({super.key});
-
-  @override
-  State<> createState() => _State();
-}
-
-class _State extends State<> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+ */
 
