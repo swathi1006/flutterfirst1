@@ -53,8 +53,6 @@ class ShoeShop extends StatelessWidget {
           itemCount: home.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 0.6,
-               // mainAxisSpacing: 6,
-               // crossAxisSpacing: 6,
                 crossAxisCount: 2),
             itemBuilder: (context,index){
               return InkWell(
