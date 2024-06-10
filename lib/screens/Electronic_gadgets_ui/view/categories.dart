@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/eghome.dart';
+import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/gadgetlist.dart';
 
 class Categories extends StatelessWidget {
   
@@ -13,7 +14,7 @@ class Categories extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back,size: 30,weight: 3,)),
       ),
-      body: const Column(
+      body:  Column(
 
         children: [
           Padding(
@@ -45,6 +46,9 @@ class Categories extends StatelessWidget {
             title: Text("Speakers",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),)
             ,),
           Card(elevation: 3,color: Colors.white,child: ListTile(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => GadgetList()));
+            },
             contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
             title: Text("Laptops",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),)
             ,),
