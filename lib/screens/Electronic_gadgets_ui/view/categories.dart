@@ -44,6 +44,10 @@ class Categories extends StatelessWidget {
             contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
             title: Text("Speakers",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),)
             ,),
+          Card(elevation: 3,color: Colors.white,child: ListTile(
+            contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
+            title: Text("Laptops",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),)
+            ,),
         ],
       ),
     );

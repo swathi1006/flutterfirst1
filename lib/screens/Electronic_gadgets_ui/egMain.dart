@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/categories.dart';
 import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/eghome.dart';
+import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/gadgetlist.dart';
 import 'package:flutterfirst/screens/Electronic_gadgets_ui/view/splashpage.dart';
 
 void main(){
@@ -14,7 +15,8 @@ class MyGadgets extends StatelessWidget {
     return MaterialApp(
       //home: GadgetsSplash(),
       //home: GadgetsHome(),
-      home: Categories(),
+      //home: Categories(),
+      home: GadgetList(),
     );
   }
 }
