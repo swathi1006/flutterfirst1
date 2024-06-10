@@ -3,7 +3,9 @@ import 'package:flutterfirst/state%20management/using%20provider/controller/them
 import 'package:provider/provider.dart';
 
 void main(){
-  runApp(ChangeNotifierProvider(create: (context) => ThemeController(),
+  runApp(
+      ChangeNotifierProvider(create:
+          (context) => ThemeController(),
       child:  MyTheme()));
 }
 

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirst/ShoeApp/model/shoeModel.dart';
 import 'package:flutterfirst/ShoeApp/screens/widgets/shoeView.dart';
+import 'package:provider/provider.dart';
+
+import '../../controller/shoeDetailsProvider.dart';
 
 class ShoeShop extends StatelessWidget {
+
+  late Shoe shoe;
 
   @override
   Widget build(BuildContext context) {
@@ -52,12 +57,22 @@ class ShoeShop extends StatelessWidget {
                // crossAxisSpacing: 6,
                 crossAxisCount: 2),
             itemBuilder: (context,index){
-              return ShoeView(
-                imagepath: home[index].image,
-                name: home[index].name,
-                desc: home[index].desc,
-                price: home[index].price,
+              return InkWell(
+                  onTap: () {
+                 //   Provider.of<ShoeDetailProvider>(context, listen: false).selectShoe(shoe);
+                    Navigator.pushNamed(
+                    context,
+                    'shoeDetails',
+                    arguments: index
+                  );},
 
+                child: ShoeView(
+                  imagepath: home[index].image,
+                  name: home[index].name,
+                  desc: home[index].desc,
+                  price: home[index].price,
+
+                ),
               );
             }),
           bottomNavigationBar: BottomNavigationBar(

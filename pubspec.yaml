@@ -54,7 +54,17 @@ dependencies:
   email_validator:
   firebase_core: ^2.31.1
   firebase_auth: ^4.19.6
+  # api integration using http
+  http: ^1.2.1
+  cached_network_image: ^3.3.1
 
+  # api integration using dio
+  dio: ^5.4.3+1
+  scrollable_positioned_list: ^0.3.8
+  # get:
+  #top_snackbar_flutter:
+  internet_connection_checker_plus: ^2.4.1
+  #font_awsome_flutter
 
 dev_dependencies:
   flutter_test:

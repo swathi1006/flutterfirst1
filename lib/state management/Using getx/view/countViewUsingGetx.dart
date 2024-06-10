@@ -14,7 +14,7 @@ class Get_main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    //get.put -> to make the controller class availiable in the entire widget tree
+    //get.put -> to make the controller class available in the entire widget tree
     final CountCntroller controller = Get.put(CountCntroller());
 
     return Scaffold(

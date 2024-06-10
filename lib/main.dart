@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
       //home: Drawer2(),
       //home: BottomSheet2(),
       //home: MainPage(),
-      //home: ShoeHome1(),
+      home: ShoeHome1(),
       //home: PlayList(),
       //home: PopularPage(),
       //home: AnimationEx(),
@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
       //home: AlertDialogg(),
       //home: WebViewEx(),
       //home: PageBuild(),
-      home: QuizPage(),
+      //home: QuizPage(),
       //home: MainPageMedia(),
       //home: MapSample(),
      /*

@@ -28,7 +28,7 @@ class PopularPage extends StatelessWidget {
           Expanded(
               child: ListView.builder(
                   itemCount: places.length,
-                  itemBuilder: (contex,index){
+                  itemBuilder: (context,index){
                 return InkWell(
 
                   onTap: () => Navigator.pushNamed(
