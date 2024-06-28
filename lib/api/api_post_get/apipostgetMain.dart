@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/api/api_post_get/apigetpostHome2.dart';
+import 'package:flutterfirst/api/api_post_get/apipostgethome.dart';
 import '../api_post_http/homeapipost.dart';
 
 
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyApiPost(),
+      //home: MyApiPost2(),
+      home: ApiHome2(),
     );
   }
 }
